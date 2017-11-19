@@ -5,6 +5,7 @@ body.page-index {
   & .wrapper {
     min-width: 320px;
     max-width: 1920px;
+    padding-bottom: 165px;
 
     overflow: hidden;
 
@@ -50,6 +51,8 @@ body.page-index {
 
   height: 100%;
 
+  overflow: hidden;
+
   outline: 4px dashed rgba(153, 50, 205, 0.47);
   outline-offset: -4px;
 
@@ -78,7 +81,7 @@ body.page-index {
     position: absolute;
     top: 277px;
     width: 1px;
-    height: 803px;
+    bottom: 0;
     background-color: #fbf9ff;
   }
 
@@ -134,7 +137,7 @@ body.page-index {
     color: #fff;
 
     &.active {
-      color: #585859;  
+      color: #585859;
     }
   }
 }
@@ -142,14 +145,21 @@ body.page-index {
 .sort {
 
   position: absolute;
-  z-index: 10;
-  top: 145px;
+  overflow: hidden;
+  // z-index: 10;
+  padding-top: 145px;
+  top: 0;
   right: 0;
   width: 150px;
   height: 100%;
 
   outline: 2px dashed orange;
   outline-offset: -2px;
+
+  &__list {
+    z-index: 22;
+    position: relative;
+  }
 
   &__item {
 
@@ -178,7 +188,7 @@ body.page-index {
 
   &__line {
     position: absolute;
-    top: 4px;
+    top: 150px;
     right: 80px;
     width: 1px;
     height: 938px;
@@ -193,18 +203,5 @@ body.page-index {
     background-color: #ffffff;
     border-radius: 50%;
     transition: 0.3s ease-out;
-  }
-}
-
-
-
-.content {
-
-  &__item {
-    width: 1200px;
-    height: 700px;
-
-    outline: 6px dashed crimson;
-    outline-offset: -6px;
   }
 }

@@ -67,41 +67,93 @@ block main
           //-         
           //-   aside.content__aside Lorem ipsum
           #my-product-slider.frame
-           ul.clearfix
-             li
-               .content__item
-                 .content__container
-                   .content__bordered
-                   img.content__image(src="http://via.placeholder.com/520x290" alt="")
-                   .content__more
-                     a.content__link(href='javascript:;') !!view more!!
-                 aside.aside
-                   .aside__title Lorem ipsum 
-                   .aside__subtitle dolor sit amet,
-                   br
-                   .aside__subtitle consectetur adipiscing elit.
-             li 1
-             li 2
-             li 3
-             li 4
+            ul.clearfix
+              li
+                .content__item.animated
+                  .content__container
+                    aside.aside
+                      .aside__content
+                        .aside__title Lorem ipsum 
+                        .aside__subtitle dolor sit amet,
+                        .aside__subtitle consectetur adipiscing elit.
+                     
+                   
+                    img.content__image(src=require('./images/item-image.jpg') alt="")
+                    .desc
+                      .desc__outer
+                        .desc__main-title portofino
+                        .desc__subtitle beach resort
+                      ul.desc__list.split-list
+                        li.desc__item  Lorem ipsum
+                        li.desc__item  Donec pharetra
+                        li.desc__item  Nunc porta
+                        li.desc__item  Nullam sed
+                        li.desc__item  Quisque viverra 
+                        li.desc__item  Vestibulum porta
+                      
+                    .bordered
+                    .bordered-arrowed
+                      .bordered-arrowed__top-line
+                      .bordered-arrowed__bottom-line
+                      a.content__more(href='javascript:;') view more
+              li
+                .content__item.animated
+                  .content__container
+                    aside.aside
+                      .aside__content
+                        .aside__title Lorem ipsum 
+                        .aside__subtitle dolor sit amet,
+                        .aside__subtitle consectetur adipiscing elit.
+                     
+                   
+                    img.content__image(src=require('./images/item-image.jpg') alt="")
+                    .desc
+                      .desc__outer
+                        .desc__main-title portofino
+                        .desc__subtitle beach resort
+                      ul.desc__list.split-list
+                        li.desc__item  Lorem ipsum
+                        li.desc__item  Donec pharetra
+                        li.desc__item  Nunc porta
+                        li.desc__item  Nullam sed
+                        li.desc__item  Quisque viverra 
+                        li.desc__item  Vestibulum porta
+                      
+                    .bordered
+                    .bordered-arrowed
+                      .bordered-arrowed__top-line
+                      .bordered-arrowed__bottom-line
+                      a.content__more(href='javascript:;') view more
+
+              li 3
+              li 4
           .scrollbar
-           .handle
-             .mousearea
+            .handle
+              .mousearea
             
             
-        .SCROLLBAR-FOR-ITEMS
+
+            
       //- eofcontent
 
 
 
       footer.footer
-        .footer__menu
-          .menu__list
-            .menu__item 0000
-            .menu__item 0000
-            .menu__item 0000
-            .menu__item 0000
-            
+        .shell
+          ul.footer__menu
+            li.footer__item 
+              a(href="javascript:;") Home
+              i
+            li.footer__item.active 
+              a(href="javascript:;") Projects 
+              i
+            li.footer__item 
+              a(href="javascript:;") About us
+              i
+            li.footer__item 
+              a(href="javascript:;") Contacts
+              i
+              
       //- .wrap(style="outline: 2px dashed crimson; height: 1700px; margin: 100px;")
 
       //- include 01__pug/01__top-row
