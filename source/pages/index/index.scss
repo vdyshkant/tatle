@@ -10,8 +10,13 @@
 //
 // @import '02__scss/01__top-row';
 //
-@import '02__scss/02__header';
-@import '02__scss/02-1__slider';
+@import '02__scss/02-0__header';
+@import '02__scss/03-0__slider';
+@import '02__scss/03-1__desc';
+@import '02__scss/03-2__content';
+@import '02__scss/03-3__bordered';
+@import '02__scss/03-4__aside';
+
 // @import '02__scss/02-2__logo';
 // @import '02__scss/02-3__contuct-us';
 // @import '02__scss/02-4__doors';
@@ -23,5 +28,5 @@
 // @import '02__scss/04-2__article';
 // @import '02__scss/04-3__banners';
 //
-// @import '02__scss/05__footer';
+@import '02__scss/05__footer';
 // @import '02__scss/99__animations';

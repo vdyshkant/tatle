@@ -1,77 +1,127 @@
-
 .footer {
 
-  min-height: 44px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 6px rgba(0, 0, 0, 0.75);
-  background: #db3534 url('images/overlay_red.jpg');
-  margin-bottom: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 
   & .shell {
+    width: 1000px;
     margin: 0 auto;
-
-    @media #{$wide} {
-      max-width: 1200px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
   }
 
-  & .stage {
-    @include clearfix;
-  }
-}
-
-
-.footer {
-
-  & .copy {
-    float: left;
-    @include font(400, normal, 18px, 44px, $helvRegular);
-    color: #ff6666;
-
-    @media screen and (max-width: 719px) {
-      float: none;
-      text-align: center;
-    }
+  &__menu {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
   }
 
-  & .nav {
-    float: right;
-    @include clearfix;
+  &__item {
+    position: relative;
+    overflow: hidden;
 
-    @media screen and (max-width: 719px) {
-      float: none;
-      text-align: center;
-    }
+    &.active {
 
-    &__item {
+      & a {
+        color: #ffffff;
+
+        &:hover {
+          & + i {
+            transform: translateY(60%);
+          }
+        }
+      }
+
+      & i {
+        position: absolute;
+        width: 7px;
+        height: 70px;
+        left: 50%;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.3s ease-out;
+        transform: translateY(0%);
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+
+        }
+
+        &::before {
+          height: 70px;
+          width: 1px;
+          background: #414042;
+        }
+
+        &::after {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: #fff;
+          left: -3px;
+        }
+      } //- EOF <i>
+    } //- EOF li.active
+
+    & a {
       display: block;
-      float: left;
-      margin-right: 40px;
-
-      @media screen and (max-width: 719px) {
-        float: none;
-        display: inline-block;
-        margin-right: 15px;
-        margin-left: 15px;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    &__link {
-      @include font(400, normal, 18px, 44px, $helvRegular);
-      color: #ffffff;
+      @include font(400, normal, 12.5px, 80px, $helvThin);
+      color: rgba(255, 255, 255, 0.4);
+      color: hsla(0, 100%, 100%, 0.4);
       text-decoration: none;
-
-      transition: 0.4s ease-out;
+      transition: 0.3s ease-out;
+      letter-spacing: 12.5px;
 
       &:hover {
-        color: #ff6666;
+        color: #ffffff;
+        // background: rgba(204, 204, 204, 0.44);
+
+        & + i {
+          transform: translateY(70%);
+        }
       }
     }
 
+    & i {
+      position: absolute;
+      width: 7px;
+      height: 70px;
+      left: 50%;
+      bottom: 0;
+      z-index: -1;
+      transition: 0.3s ease-out;
+      transform: translateY(100%);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+
+      }
+
+      &::before {
+        height: 70px;
+        width: 1px;
+        background: #414042;
+      }
+
+      &::after {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #fff;
+        left: -3px;
+      }
+    } //- EOF <i>
+
   }
+
+
 }

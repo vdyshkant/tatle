@@ -5,173 +5,27 @@ block main
   body.page-index
     .wrapper
       
-      .portfolio Portfolio
-      
-      .back
-        .back__line-top
-        .back__line-bottom
-        a.back__arrow(herf="javascript:;")
-          
-      .sort(data-{adasd})
-        ul.sort__list
-          .sort__arr
-          li.sort__item.active
-            a.sort__link(href="javascript:;" data-id="1") 2017
-          li.sort__item
-            a.sort__link(href="javascript:;") 2016
-          li.sort__item
-            a.sort__link(href="javascript:;") 2015
-          li.sort__item
-            a.sort__link(href="javascript:;") 2014
-          
-        .sort__line
+      include 01__pug/01-1__back-sort-portfolio
+
+
       //- header
       include 01__pug/02__header
       //- eof header
 
-      
-      
-      
 
       //- user-block
-      .user-block
-        form.lang
-          label.lang__radio(for='option-two')
-            input(type='radio', name='optionsRadios', value='option1', checked='')
-            i
-            | EN
-          label.lang__radio(for='option-three')
-            input(type='radio', name='optionsRadios', value='option2')
-            i
-            | RU
-
-
-        .sound
+      include 01__pug/01-2__user-block
       //- eof user-block
 
 
-
-
       //- content
-      .content
-        
-        
-        
-        .content__item-list
-          //- item
-          //- .content__item
-          //-   .content__container
-          //-     .content__bordered
-          //-     .content__more
-          //-       a.content__link(href="javascript:;")
-          //-         
-          //-   aside.content__aside Lorem ipsum
-          #my-product-slider.frame
-            ul.clearfix
-              li
-                .content__item.animated
-                  .content__container
-                    aside.aside
-                      .aside__content
-                        .aside__title Lorem ipsum 
-                        .aside__subtitle dolor sit amet,
-                        .aside__subtitle consectetur adipiscing elit.
-                     
-                   
-                    img.content__image(src=require('./images/item-image.jpg') alt="")
-                    .desc
-                      .desc__outer
-                        .desc__main-title portofino
-                        .desc__subtitle beach resort
-                      ul.desc__list.split-list
-                        li.desc__item  Lorem ipsum
-                        li.desc__item  Donec pharetra
-                        li.desc__item  Nunc porta
-                        li.desc__item  Nullam sed
-                        li.desc__item  Quisque viverra 
-                        li.desc__item  Vestibulum porta
-                      
-                    .bordered
-                    .bordered-arrowed
-                      .bordered-arrowed__top-line
-                      .bordered-arrowed__bottom-line
-                      a.content__more(href='javascript:;') view more
-              li
-                .content__item.animated
-                  .content__container
-                    aside.aside
-                      .aside__content
-                        .aside__title Lorem ipsum 
-                        .aside__subtitle dolor sit amet,
-                        .aside__subtitle consectetur adipiscing elit.
-                     
-                   
-                    img.content__image(src=require('./images/item-image.jpg') alt="")
-                    .desc
-                      .desc__outer
-                        .desc__main-title portofino
-                        .desc__subtitle beach resort
-                      ul.desc__list.split-list
-                        li.desc__item  Lorem ipsum
-                        li.desc__item  Donec pharetra
-                        li.desc__item  Nunc porta
-                        li.desc__item  Nullam sed
-                        li.desc__item  Quisque viverra 
-                        li.desc__item  Vestibulum porta
-                      
-                    .bordered
-                    .bordered-arrowed
-                      .bordered-arrowed__top-line
-                      .bordered-arrowed__bottom-line
-                      a.content__more(href='javascript:;') view more
-
-              li 3
-              li 4
-          .scrollbar
-            .handle
-              .mousearea
-            
-            
-
-            
+      include 01__pug/03-0__content
       //- eofcontent
 
 
 
-      footer.footer
-        .shell
-          ul.footer__menu
-            li.footer__item 
-              a(href="javascript:;") Home
-              i
-            li.footer__item.active 
-              a(href="javascript:;") Projects 
-              i
-            li.footer__item 
-              a(href="javascript:;") About us
-              i
-            li.footer__item 
-              a(href="javascript:;") Contacts
-              i
-              
-      //- .wrap(style="outline: 2px dashed crimson; height: 1700px; margin: 100px;")
-
-      //- include 01__pug/01__top-row
-      //- include 01__pug/02__header
-      //- 
-      //- .main
-      //-   include 01__pug/03__slider
-      //-   
-      //-   include 01__pug/04__content
-      //-   
-      //-   
-      //- include 01__pug/05__footer
-      //- 
-      //- .overlay
-      //- 
-      
-
-
+      include 01__pug/05__footer
+            
 
 
 //- img(src=require('./images/frame_01__meetups.png') width="100")

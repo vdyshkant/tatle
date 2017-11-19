@@ -1,0 +1,68 @@
+
+.sort {
+
+  position: absolute;
+  overflow: hidden;
+  // z-index: 10;
+  padding-top: 145px;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100%;
+
+  outline: 2px dashed orange;
+  outline-offset: -2px;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+
+  &__list {
+    z-index: 22;
+    position: relative;
+  }
+
+  &__item {
+
+    &.active .sort__link {
+      color: #efefef;
+    }
+  }
+
+  &__link {
+    display: block;
+    @include font(700, normal, 8px, 21.05px, $helvBold);
+    color: #484848;
+
+    padding-bottom: 40px;
+    text-transform: uppercase;
+
+    letter-spacing: 6.59px;
+
+    transition: 0.3s ease-out;
+    text-decoration: none;
+
+    &:hover {
+      color: #efefef;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 150px;
+    right: 80px;
+    width: 1px;
+    height: 938px;
+    background-color: #ffffff;
+  }
+
+  &__arr {
+    position: absolute;
+    right: 76px;
+    width: 9px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: 0.3s ease-out;
+  }
+}

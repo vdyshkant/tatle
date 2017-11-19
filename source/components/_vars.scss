@@ -11,10 +11,11 @@ $helvThin      : 'HelveticaNeueCyr-Thin', sans-serif;
 
 
 $break-mobile: 320px;
-$break-tablet: 768px;
+$break-tablet: 1000px;
 $break-wide: 1920px;
 
 
 
-$tablet: "only screen and (min-width: "$break-mobile") and (max-width: "$break-tablet")";
+$tablet: "only screen and (max-width: "$break-tablet")";
+// $tablet: "only screen and (min-width: "$break-mobile") and (max-width: "$break-tablet")";
 $wide: "only screen and (min-width: "$break-tablet + 1")";

@@ -1,0 +1,32 @@
+
+.aside {
+  text-align: right;
+  float: left;
+  width: 175px;
+  height: 51px;
+  padding-right: 30px;
+  padding-top: 165px;
+  position: relative;
+  height: 100%;
+  // top: 50%;
+  // left: -50px;
+  // outline: 2px dashed white;
+  // outline-offset: -2px;
+
+  &__content {
+
+  }
+
+  &__title {
+    @include font(300, normal, 11.32px, 18px, $helvLight);
+    color: #c1c1c1;
+    letter-spacing: 5.24px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  &__subtitle {
+    @include font(300, normal, 11.32px, 18px, $helvLight);
+    color: #5d5d5d;
+    letter-spacing: 0.31px;
+  }
+}

@@ -1,0 +1,46 @@
+.content {
+
+  position: relative;
+  z-index: 11;
+
+  &__container {
+    position: relative;
+    height: 100%;
+    @include clearfix;
+  }
+  &__item {
+    height: 100%;
+  }
+  &__image {
+    float: left;
+    display: block;
+    margin-top: 50px;
+    width: 524px;
+    height: 294px;
+
+    z-index: 10;
+    position: relative;
+
+    // outline: 3px dashed tan;
+    // outline-offset: -3px;
+  }
+
+  &__more {
+    position: absolute;
+    bottom: -9px;
+    right: -85px;
+    @include font(400, normal, 12.5px, 18.25px, $helvRegular);
+    color: #adadad;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    transition: 0.3s ease-out;
+
+    z-index: 2;
+
+    &:hover {
+      color: #e6b501;
+    }
+  }
+
+}
