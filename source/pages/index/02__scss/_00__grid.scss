@@ -47,16 +47,19 @@ body.page-index {
 }
 
 .back {
+  width: 110px;
   position: fixed;
-  padding-left: 80px;
+  padding-left: 83px;
 
-  outline: 4px dashed darkorchid;
+  height: 100%;
+
+  outline: 4px dashed rgba(153, 50, 205, 0.47);
   outline-offset: -4px;
 
   &__line-top {
     /* Style for "Layer 19 c" */
     width: 1px;
-    height: 140px;
+    height: 143px;
     background-color: #fbf9ff;
     position: relative;
 
@@ -64,9 +67,9 @@ body.page-index {
       content: '';
       position: absolute;
       /* Style for "Эллипс 2 к" */
-      width: 9px;
+      width: 8px;
       height: 8px;
-      background-color: #ffffff;
+      background-color: #fbf9ff;
       bottom: -4px;
       left: -4px;
       border-radius: 50%;
@@ -75,8 +78,8 @@ body.page-index {
 
   &__line-bottom {
     /* Style for "Layer 19 c" */
-    position: relative;
-    top: 300px;
+    position: absolute;
+    top: 277px;
     width: 1px;
     height: 803px;
     background-color: #fbf9ff;
@@ -85,27 +88,33 @@ body.page-index {
   &__arrow {
     display: block;
     position: absolute;
-    top: 158px;
+    top: 145px;
     left: 0;
     width: 110px;
-    height: 110px;
+    height: 130px;
     background: url('images/bg-back-dots.png') no-repeat;
+    background-position: right 5px top 10px;
     cursor: pointer;
     user-select: none;
 
     transition: 0.6s ease-out;
     &:hover {
-      outline: 2px solid hsla(19, 56%, 40%, 0.72);
+      outline: 2px solid #e6b501;
+
+      &::before {
+        color: #e6b501;
+      }
     }
 
     &::before {
       content:'v';
-      font-size: 30px;
+      font-size: 45px;
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 40px;
+      left: 70px;
       color: #fff;
       transform: rotate(90deg);
+      transition: 0.4s ease-out;
     }
   }
 }
