@@ -28,20 +28,22 @@ body.page-index {
 }
 
 .portfolio {
-  opacity: 0.01;
+  // opacity: 0.01;
+  opacity: 0.11;
+  // color: #fff;
   color: red;
   font-family: "Helvetica Neue Cyr";
   font-size: 396px;
   font-weight: 700;
   line-height: 109.97px;
-  /* Text style for "P, ortfoli" */
   letter-spacing: 3px;
   text-align: center;
 
   position: absolute;
   top: 122px;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
 .back {
