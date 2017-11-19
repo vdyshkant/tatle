@@ -1,0 +1,32 @@
+//- logo
+
+.logo {
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 230px;
+
+  @media screen and (max-width: 719px) {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    background: url('images/logo.png');
+    margin: 0 auto;
+    width: 93px;
+    height: 92px;
+    margin-bottom: 10px;
+  }
+  &__text {
+    width: 196px;
+    height: 35px;
+    margin: 0 auto;
+    background: url('images/logo-text.png');
+    position: relative;
+    left: 5px;
+  }
+}
+
+//- eof logo

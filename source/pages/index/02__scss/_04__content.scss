@@ -1,0 +1,45 @@
+.content {
+
+  padding-bottom: 95px;
+
+  & .shell {
+    margin: 0 auto;
+
+    @media #{$wide} {
+      max-width: 1200px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  & .container {
+
+  }
+
+  & .stage {
+
+  }
+
+  & .title {
+    @include font(600, normal, 48px, 58px, $bebas);
+    // text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    text-shadow: 3px 2px 3px rgba(255,255,255,0.15);
+    color: #608b30;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+
+
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+               url('images/overlay_green.jpg') repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+  }
+
+
+}
+
+.content__body {
+  @include clearfix;
+}

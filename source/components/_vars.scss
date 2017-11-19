@@ -1,0 +1,20 @@
+
+$helvRegular   : 'HelveticaNeueCyr-Regular', sans-serif;
+
+$helvBold      : 'HelveticaNeueCyr-Bold', sans-serif;
+$helvLight     : 'HelveticaNeueCyr-Light', sans-serif;
+$helvMedium    : 'HelveticaNeueCyr-Medium', sans-serif;
+// thin
+// ultralight
+$helvMediumIt  : 'HelveticaNeueCyr-MediumItaicl', sans-serif;
+
+
+
+$break-mobile: 320px;
+$break-tablet: 768px;
+$break-wide: 1920px;
+
+
+
+$tablet: "only screen and (min-width: "$break-mobile") and (max-width: "$break-tablet")";
+$wide: "only screen and (min-width: "$break-tablet + 1")";

@@ -1,0 +1,99 @@
+
+.header {
+
+  margin-top: 47px;
+  padding-left: 170px;
+
+  outline: 2px dashed green;
+  outline-offset: -2px;
+
+  & .shell {
+    margin: 0 auto;
+    // padding-left: 15px;
+    // padding-right: 15px;
+
+    @media #{$wide} {
+      max-width: 1920px;
+      // padding-left: 30px;
+      // padding-right: 30px;
+    }
+  }
+
+  & .container {
+    padding: 160px 0 20px 0;
+
+    // @media screen and (max-width: 719px) {
+    //   padding-top: 25px;
+    //   padding-bottom: 35px;
+    // }
+  }
+
+  & .stage {
+
+  }
+}
+
+.header__title {
+  /* Style for "Portfolio" */
+  color: #efefef;
+  font-family: "Helvetica Neue Cyr";
+  font-size: 74px;
+  font-weight: 700;
+  line-height: 20.59px;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    /* Style for "Эллипс 2 к" */
+    width: 9px;
+    height: 8px;
+    border-radius:   50%;
+    background-color: #fbf9ff;
+    // background-color: #b3abdb;
+  }
+}
+
+.header__subtitle {
+  /* Style for "web develo" */
+  color: #efefef;
+  font-family: "Helvetica Neue Cyr - Thin";
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 38.04px;
+  text-transform: uppercase;
+  /* Text style for "w, eb deve" */
+  letter-spacing: 13.5px;
+}
+
+nav.nav {
+
+}
+
+.nav__list {
+
+}
+
+.nav__item {
+  display: inline-block;
+  color: #484848;
+  font-family: "Helvetica Neue Cyr";
+  font-size: 8px;
+  font-weight: 300;
+  line-height: 21.05px;
+  text-transform: uppercase;
+  /* Text style for "game" */
+  letter-spacing: 6.59px;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 30px;
+
+  &.active,
+  &:hover {
+    color: #fff;
+  }
+}

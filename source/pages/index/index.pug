@@ -1,0 +1,115 @@
+extends ../base
+block title
+  | Дверь на дачу
+block main
+  body.page-index
+    .wrapper
+      
+      .portfolio Portfolio
+      
+      .back
+        .back__line-top
+        .back__line-bottom
+        a.back__arrow(herf="javascript:;")
+          
+      .sort(data-{adasd})
+        .sort__list
+          .sort__year 2017
+          .sort__year 2016
+          .sort__year 2015
+          .sort__year 2014
+        .sort__line
+      //- header
+      include 01__pug/02__header
+      //- eof header
+
+      
+      
+      
+
+      //- user-block
+      .user-block
+        .lang
+          label
+            | EN
+            input(type='radio')
+          label
+            | RU
+            input(type='radio')
+        .sound
+      //- eof user-block
+
+
+
+
+      //- content
+      .content
+        
+        
+        
+        .content__item-list
+          //- item
+          //- .content__item
+          //-   .content__container
+          //-     .content__bordered
+          //-     .content__more
+          //-       a.content__link(href="javascript:;")
+          //-         
+          //-   aside.content__aside Lorem ipsum
+          #my-product-slider.frame
+           ul.clearfix
+             li
+               .content__item
+                 .content__container
+                   .content__bordered
+                   img.content__image(src="http://via.placeholder.com/520x290" alt="")
+                   .content__more
+                     a.content__link(href='javascript:;') !!view more!!
+                 aside.aside
+                   .aside__title Lorem ipsum 
+                   .aside__subtitle dolor sit amet,
+                   br
+                   .aside__subtitle consectetur adipiscing elit.
+             li 1
+             li 2
+             li 3
+             li 4
+          .scrollbar
+           .handle
+             .mousearea
+            
+            
+        .SCROLLBAR-FOR-ITEMS
+      //- eofcontent
+
+
+
+      footer.footer
+        .footer__menu
+          .menu__list
+            .menu__item 0000
+            .menu__item 0000
+            .menu__item 0000
+            .menu__item 0000
+            
+      //- .wrap(style="outline: 2px dashed crimson; height: 1700px; margin: 100px;")
+
+      //- include 01__pug/01__top-row
+      //- include 01__pug/02__header
+      //- 
+      //- .main
+      //-   include 01__pug/03__slider
+      //-   
+      //-   include 01__pug/04__content
+      //-   
+      //-   
+      //- include 01__pug/05__footer
+      //- 
+      //- .overlay
+      //- 
+      
+
+
+
+
+//- img(src=require('./images/frame_01__meetups.png') width="100")
