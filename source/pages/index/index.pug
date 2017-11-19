@@ -13,11 +13,17 @@ block main
         a.back__arrow(herf="javascript:;")
           
       .sort(data-{adasd})
-        .sort__list
-          .sort__year 2017
-          .sort__year 2016
-          .sort__year 2015
-          .sort__year 2014
+        ul.sort__list
+          .sort__arr
+          li.sort__item.active
+            a.sort__link(href="javascript:;" data-id="1") 2017
+          li.sort__item
+            a.sort__link(href="javascript:;") 2016
+          li.sort__item
+            a.sort__link(href="javascript:;") 2015
+          li.sort__item
+            a.sort__link(href="javascript:;") 2014
+          
         .sort__line
       //- header
       include 01__pug/02__header
@@ -29,13 +35,17 @@ block main
 
       //- user-block
       .user-block
-        .lang
-          label
+        form.lang
+          label.lang__radio(for='option-two')
+            input(type='radio', name='optionsRadios', value='option1', checked='')
+            i
             | EN
-            input(type='radio')
-          label
+          label.lang__radio(for='option-three')
+            input(type='radio', name='optionsRadios', value='option2')
+            i
             | RU
-            input(type='radio')
+
+
         .sound
       //- eof user-block
 

@@ -715,7 +715,7 @@ jQuery(function ($) {
             scrollBar: $wrap.find('.scrollbar'),
             startAt: 0,
             scrollBy: 1,
-            speed: 300,
+            speed: 2500,
             elasticBounds: 1,
             easing: 'easeOutExpo',
             dragHandle: 1,
@@ -743,34 +743,14 @@ jQuery(function ($) {
 
   var toggled = 0;
 
-  $('.artclose').click(function(){
-    if(toggled == 0){
-    $('.burgx3').stop().transition({rotate: "45", "margin-top": "13px"});
-    $('.burgx2').stop().transition({opacity: "0"}, "fast");
-    $('.burgx').stop().transition({rotate: "-45", "margin-top": "13px"});
-    $('.drop').toggleClass('opened');
-    $('.overlay').css('display', 'block');
-      toggled++;
-    }
-    else{
-    $('.burgx3').stop().transition({rotate: "+=135", "margin-top": "3px"});
-    $('.burgx2').transition({opacity: "1"}, "fast");
-    $('.burgx').stop().transition({rotate: "-=135", "margin-top": "23px"});
-    $('.drop').toggleClass('opened');
-    $('.overlay').css('display', 'none');
-    toggled--;
-    }
+  $('.sort__link').on("click", function(event) {
+    event.stopPropagation(); /* important */
+    var index = $(this).parent().index();
+    $('.sort__link').parent().removeClass('active');
+    $(this).parent().addClass('active');
+    var translateY = ((index - 1) * 61) + 5;
+    $('.sort__arr').css('transform', 'translateY('+ translateY +'px)');
   });
-
-  $('.overlay').click(function() {
-    $('.burgx3').stop().transition({rotate: "+=135", "margin-top": "3px"});
-    $('.burgx2').transition({opacity: "1"}, "fast");
-    $('.burgx').stop().transition({rotate: "-=135", "margin-top": "23px"});
-    $('.drop').toggleClass('opened');
-    $('.overlay').css('display', 'none');
-    toggled--;
-  });
-
 
 })(jQuery);
 

@@ -28,14 +28,11 @@ body.page-index {
 }
 
 .portfolio {
+  @include font(700, normal, 396px, 109.97px, $helvBold);
   // opacity: 0.01;
   opacity: 0.11;
   // color: #fff;
   color: red;
-  font-family: "Helvetica Neue Cyr";
-  font-size: 396px;
-  font-weight: 700;
-  line-height: 109.97px;
   letter-spacing: 3px;
   text-align: center;
 
@@ -130,34 +127,72 @@ body.page-index {
   outline-offset: -2px;
 }
 
+.lang {
+
+  &__radio {
+    @include font(300, normal, 12px, 12px, $helvThin);
+    color: #fff;
+
+    &.active {
+      color: #585859;  
+    }
+  }
+}
+
 .sort {
 
   position: absolute;
-  top: 200px;
-  right: 80px;
+  z-index: 10;
+  top: 145px;
+  right: 0;
+  width: 150px;
+  height: 100%;
 
   outline: 2px dashed orange;
   outline-offset: -2px;
 
+  &__item {
 
-  &__year {
-    color: #fff;
-    margin-bottom: 40px;
-    /* Style for "2017" */
-    width: 40px;
-    height: 6px;
-    color: #efefef;
-    font-family: "Helvetica Neue Cyr";
-    font-size: 8px;
-    font-weight: 700;
-    line-height: 21.05px;
+    &.active .sort__link {
+      color: #efefef;
+    }
+  }
+
+  &__link {
+    display: block;
+    @include font(700, normal, 8px, 21.05px, $helvBold);
+    color: #484848;
+
+    padding-bottom: 40px;
     text-transform: uppercase;
-    /* Text style for "2017" */
+
     letter-spacing: 6.59px;
+
+    transition: 0.3s ease-out;
+    text-decoration: none;
+
+    &:hover {
+      color: #efefef;
+    }
   }
 
   &__line {
+    position: absolute;
+    top: 4px;
+    right: 80px;
+    width: 1px;
+    height: 938px;
+    background-color: #ffffff;
+  }
 
+  &__arr {
+    position: absolute;
+    right: 76px;
+    width: 9px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: 0.3s ease-out;
   }
 }
 
