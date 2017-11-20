@@ -7,11 +7,19 @@
 
 
 
+
+
+
   background: url('images/bg-header-dots.png') no-repeat;
   background-position: left 25px top 10px;
 
-  outline: 2px dashed dodgerblue;
-  outline-offset: -2px;
+  // outline: 2px dashed dodgerblue;
+  // outline-offset: -2px;
+
+  @media #{$wide} {
+    width: 635px;
+    float: left;
+  }
 
   @media #{$tablet} {
     background: url('images/bg-header-dots--tablet.png') no-repeat;
@@ -21,7 +29,15 @@
   }
 
   & .shell {
-    margin: 0 auto;
+    margin: 0 auto 80px;
+
+    @media #{$tablet} {
+
+      padding-left: 87px;
+      padding-right: 87px;
+
+        margin: 0 auto 70px;
+    }
 
     @media #{$wide} {
       max-width: 1920px;
@@ -37,7 +53,8 @@
   }
 
   &__title {
-    @media #{$tablet} {
+    position: relative;
+    @media #{$wide} {
       margin-left: 87px;
     }
   }
@@ -59,11 +76,11 @@
     &::before { //- @@@@
       content: '';
       position: absolute;
-      left: -30px;
-      top: 50%;
+      left: -42px;
+      bottom: 50px;
       /* Style for "Эллипс 2 к" */
-      width: 9px;
-      height: 8px;
+      width: 17px;
+      height: 17px;
       border-radius:   50%;
       background-color: #fbf9ff;
       // background-color: #b3abdb;
@@ -84,10 +101,24 @@
     left: -5px;
     width: calc(100% + 5px);
 
-    @media screen and (max-width: 1000px) {
+    @media #{$tablet} {
       @include font(300, normal, 46px, 59px, $helvThin);
       left: 0;
+      margin-bottom: 30px;
     }
   }
 
+
+  &__tab-index {
+    position: absolute;
+    top: 24px;
+    left: 520px;
+    @include font(300, normal, 81px, 81px, $helvUltraL);
+    color: #ffffff;
+    line-spacing: 3px;
+
+    @media #{$tablet} {
+      display: none;
+    }
+  }
 }

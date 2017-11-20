@@ -1,0 +1,43 @@
+
+// header
+header.header
+  .shell
+    .container
+      .stage
+        
+        .header__title
+          h1.header__main-title Portfolio
+          .header__subtitle beach resort
+          .header__tab-index#js-tab-index 01 
+        
+        nav.nav(data-SCROLLBAR)
+          .nav__scrollbar
+            .handle
+          
+          .nav__list.owl-carousel
+            a.nav__item.active(href="#tab1" data-menuId="01") 01
+            a.nav__item(href="#tab2" data-menuId="02") 02
+            a.nav__item(href="#tab3" data-menuId="03") 03
+            a.nav__item(href="#tab4" data-menuId="04") 04
+          
+  
+  .main-content
+    .main__shell
+        
+        
+      //- <!--  Tabbed Content  -->
+      .block#tab01.activated
+        include ./content-tabs/tab_01
+        
+      .block#tab02
+        include ./content-tabs/tab_02
+        
+      .block#tab03
+        include ./content-tabs/tab_03
+        
+      .block#tab04
+        include ./content-tabs/tab_04
+
+            
+// eof header
+  

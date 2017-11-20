@@ -1,0 +1,127 @@
+
+.user-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 145px;
+
+  outline: 2px dashed dodgerblue;
+  outline-offset: -2px;
+
+  @media #{$tablet} {
+    width: 100%;
+  }
+
+  & .shell {
+    @include clearfix;
+
+    @media #{$tablet} {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+  }
+
+
+  & .my-vision {
+    float: left;
+    width: 150px;
+    height: 144px;
+    font-size: 0;
+
+    @media #{$wide} {
+      display: none;
+    }
+
+    &__text {
+      display: inline-block;
+      @include font(400, normal, 37px, 144px, $helvRegular);
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+
+      & span {
+        @include font(100, normal, 37px, 144px, $helvRegular);
+        color: #8c8c8c;
+        letter-spacing: 5px;
+        text-transform: lowercase;
+      }
+
+    }
+  }
+
+  & .make-order {
+    width: 360px;
+    text-align: center;
+
+    @media screen and (min-width: 1001px) {
+      display: none;
+    }
+
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+
+    @include font(300, normal, 37px, 37px, $helvLight);
+    color: #bbb;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+
+    & i {
+      position: absolute;
+      width: 17px;
+      height: 36px;
+      left: 50%;
+      top: -50px;
+      z-index: -1;
+      transition: 0.3s ease-out;
+      transform: translateX(-50%);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+
+      }
+
+      &::before {
+        height: 28px;
+        width: 3px;
+        background: #414042;
+      }
+
+      &::after {
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: #fff;
+        left: 1px;
+        top: 20px;
+      }
+    } //- EOF <i>
+  }
+}
+
+
+
+.lang {
+  @media screen and (max-width: 1000px) {
+    width: 250px;
+    height: 144px;
+    float: right;
+  }
+
+  outline: 2px dashed crimson;
+  outline-offset: -2px;
+
+
+  &__radio {
+    @include font(300, normal, 12px, 12px, $helvThin);
+    color: #fff;
+
+    &.active {
+      color: #585859;
+    }
+  }
+}

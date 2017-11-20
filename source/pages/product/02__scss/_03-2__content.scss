@@ -1,0 +1,139 @@
+
+.main-content {
+  // float: left;
+}
+
+.main__shell {
+  padding-left: 87px;
+  padding-right: 87px;
+}
+
+.block {
+
+  display: none;
+
+
+
+  // margin-left: 170px;
+
+  @include clearfix;
+
+  // outline: 2px dashed crimson;
+  // outline-offset: -2px;
+
+
+  @media #{$wide} {
+    width: 650px;
+  }
+
+  &.activated {
+    display: block;
+  }
+
+  & .left-column-line {
+    position: relative;
+    // width: 100px;
+    float: left;
+
+    @media #{$tablet} {
+      display: none;
+    }
+
+    &__text {
+      @include font(300, normal, 66px, 66px, $helvUltraL);
+      color: #555555;
+      opacity: 0.1;
+      opacity: 0.4;
+      letter-spacing: 37.56px;
+      text-transform: uppercase;
+      transform: rotate(270deg) translate(119%, 77%);
+      transform-origin: bottom right;
+      height: 650px;
+      width: 75px;
+      white-space: nowrap;
+
+      &::before{
+        content:'';
+        padding:50% 0;
+
+        width: 0;
+        height: 0;
+        display:block;
+        position:relative;
+        top:20px
+      }
+    }
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 2000px;
+    background: red;
+    background:#2c2b2d;
+  }
+
+
+    // outline: 2px dashed gold;
+    // outline-offset: -4px;
+  }
+
+  & .tab-content {
+
+
+    @media #{$wide} {
+
+      padding-left: 28px;
+      padding-right: 28px;
+
+        width: 550px;
+        float: left;
+    }
+
+    // outline: 2px dashed #fff;
+    // outline-offset: -4px;
+
+
+    &__title {
+      @include font(700, normal, 33px, 33px, $helvBold);
+      color: #efefef;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 24px;
+
+      @media #{$tablet} {
+        @include font(700, normal, 62px, 62px, $helvBold);
+        margin-bottom: 50px;
+      }
+    }
+
+    &__subtitle {
+      @include font(500, normal, 11px, 25px, $helvMedium);
+      color: #ececec;
+      letter-spacing: 0.3px;
+
+
+      @media #{$tablet} {
+        @include font(500, normal, 38px, 38px, $helvMedium);
+        margin-bottom: 15px;
+      }
+    }
+
+    &__text {
+      @include font(400, normal, 11px, 28px, $helvRegular);
+      color: #555555;
+      letter-spacing: 0.31px;
+      margin-bottom: 22px;
+
+      @media #{$tablet} {
+        @include font(400, normal, 25px, 54px, $helvRegular);
+        color: #848484;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -4,10 +4,13 @@
   width: 500px;
   text-align: left;
   padding-top: 90px;
-  padding-left: 40px;
 
   position: relative;
   z-index: 2;
+
+  @media #{$wide} {
+    padding-left: 40px;
+  }
 
   @media #{$tablet} {
     float: left;
@@ -65,5 +68,18 @@
       @include font(400, normal, 8px, 18.25px, $helvRegular);
       color: #b0b0b0;
     }
+  }
+
+  &__text {
+    @media #{$wide} {
+      display: none;
+    }
+    padding-top: 40px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    @include font(400, normal, 25px, 58px, $helvRegular);
+    color: #848484;
+    letter-spacing: 0.63px;
   }
 }

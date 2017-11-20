@@ -1,99 +1,31 @@
 extends ../base
 block title
-  | product page
+  | Portofino Beach Resort
 block main
-  body.page-index
+  body.page-product
     .wrapper
       
-      .back
-        .back-arrow
-        .back-line
-          
+      include 01__pug/01-1__back-sort-portfolio
+
       
       //- header
-      .top-block
-        header.header
-          .header__title
-          .header__subtitle
-            
-          .tabs__counter#tCounter
-            
-        //- tabs && content
-        
-      .content
-        
-        .tabs__btns#tItems
-          .tabs__btn-item        
-        
-          
-
-        .tabs__content-text#tabs_text
-          //- container
-          .tabs__content-list
-            .tabs__content-item
-              .tabs__title
-              .tabs__subtitle
-              .tabs__text
-                
-        .content-thumbs#tabs_thumbs
-          .thumbs__shell
-          .thumbs__container
-          .thumbs-list
-            
-            .thumb-item
-              .thumb-title
-              .thumb-subtitle
-              .thumb-image
-              .thumb-text
-              
-        //- eoftabs
-            
-
-      //- EOF header
-
-
+      include 01__pug/02__header
+      //- eof header
 
 
       //- user-block
-      .user-block
-        .lang
-          label
-            | EN
-            input(type='radio')
-          label
-            | RU
-            input(type='radio')
-        .sound
+      include 01__pug/01-2__user-block
       //- eof user-block
 
 
-
-
       //- content
-      .content
-        
-        
-        
-        .content__item-list
-          //- item
-          .content__item
-            .item-container
-              .bordered
-              .bordered__more
-                a.view__more(href="javascript:;")
-                  
-            aside Lorem ipsum
-            
-            
-        .SCROLLBAR-FOR-ITEMS
+      include 01__pug/03-0__content
       //- eofcontent
 
 
 
-      footer.footer
-        .footer__menu
-          .menu__list
-            .menu__item 0000
-            .menu__item 0000
-            .menu__item 0000
-            .menu__item 0000
+      include 01__pug/05__footer
+            
+
+
+//- img(src=require('./images/frame_01__meetups.png') width="100")

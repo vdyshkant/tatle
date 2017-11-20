@@ -1,0 +1,253 @@
+
+.secondary{
+
+  &-content {
+    padding-top: 145px;
+    position: relative;
+
+
+    position: relative;
+
+    @media #{$wide} {
+      float: right;
+      width: calc(690px);
+
+      margin-right: 80px;
+    }
+
+    @media #{$tablet} {
+      padding-top: 85px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 515px;
+      width: 1px;
+      height: 2000px;
+      background: #2b2b2d;
+
+      @media #{$tablet} {
+        display: none;
+      }
+
+    }
+
+    & .shell {
+      padding-left: 87px;
+      padding-right: 87px;
+    }
+
+  }
+
+
+
+  & .container {
+
+  }
+
+  &__item {
+    @include clearfix;
+
+    @media #{$wide} {
+      width: 505px;
+    }
+
+    @media #{$tablet} {
+      margin-bottom: 80px;
+    }
+
+    // outline: 2px dashed dodgerblue;
+    // outline-offset: -2px;
+  }
+  &__essence {
+    @media #{$wide} {
+      width: 430px;
+      padding-right: 30px;
+      // outline: 2px dashed tan;
+      // outline-offset: -4px;
+      float: left;
+    }
+  }
+
+  &__line {
+    float: left;
+    width: 75px;
+    // outline: 2px dashed gold;
+    // outline-offset: -4px;
+    position: relative;
+
+    @media #{$tablet} {
+      display: none;
+    }
+
+    &-text {
+      @include font(300, normal, 46px, 35px, $helvUltraL);
+      opacity: 0.1; //--@@@@@
+      opacity: 0.4;
+      transform: rotate(90deg) translate(-550%, 92%);
+      transform-origin: bottom right;
+      color: #efefef;
+      text-transform: uppercase;
+      letter-spacing: 20px;
+      height: 650px;
+      width: 100px;
+      position: relative;
+      white-space: nowrap;
+      &::before {
+        content: '';
+        padding: 50% 0;
+        display: block;
+        background: red;
+        position: relative;
+        top: 20px;
+        width: 0;
+        height: 0;
+      }
+    }
+
+  }
+
+  &__image {
+    width: 398px;
+    height: 648px;
+    margin-bottom: 22px;
+    display: block;
+
+    @media #{$tablet} {
+      width: 827px;
+      height: 1347px;
+      margin-bottom: 47px;
+    }
+  }
+
+  &__title {
+    @include font(400, normal, 43px, 40px, $helvThin);
+    color: #c3c3c3;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @media #{$wide} {
+
+      text-align: right;
+    }
+
+
+    @media #{$tablet} {
+      @include font(400, normal, 62px, 62px, $helvThin);
+      letter-spacing: 12.5px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    @include font(400, normal, 12px, 25px, $helvThin);
+    color: #555;
+    letter-spacing: 0.3px;
+    margin-bottom: 12px;
+
+    @media #{$wide} {
+
+      text-align: right;
+    }
+
+    @media #{$tablet} {
+      display: none;
+    }
+  }
+  &__text {
+    @include font(400, normal, 12px, 25px, $helvThin);
+    color: #555;
+    letter-spacing: 0.3px;
+    text-align: right;
+
+    @media #{$tablet} {
+      @include font(400, normal, 25px, 55px, $helvRegular);
+      color: #848484;
+      text-align: left;
+    }
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.secondary-content .frame ul.items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 24px;
+    line-height: 100px;
+}
+
+.secondary-content .frame {
+    overflow: hidden;
+    // border: 1px solid #444;
+
+    @media #{$wide} {
+      height: 800px;
+      padding-right: 180px;
+      width: 690px;
+    }
+}
+
+.secondary-content .frame ul.items li {
+    float: left;
+    width: 100%;
+    height: 100px;
+    margin: 0 0 1px;
+    padding: 0;
+    background: #333;
+    color: #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.secondary-content .scrollbar {
+    position: absolute;
+    right: 10px;
+    top: 145px;
+    width: 2px;
+    height: 800px;
+    background: #ccc;
+    line-height: 0;
+
+    @media #{$tablet} {
+      display: none;
+    }
+}
+
+.secondary-content .scrollbar .handle {
+
+    background: #292a33;
+    cursor: pointer;
+
+    width: 9px;
+    height: 8px;
+    left: -3px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    &-fake {
+      position: absolute;
+      top:   0;
+      background: #ccc;
+      width: 2px;
+      height: 2000px;
+      z-index: -1;
+    }
+}
