@@ -695,42 +695,93 @@ import './index.scss';
     }
 })(jQuery, window);
 
-jQuery(function ($) {
-    (function () {
-        var title = 'BO 0018/S / D28JJ'; //$('#po13342').find(":selected").text();
-        var startIndex = $("a[title='"+title+"']").parent().index();
-        var $frame = $('#main-slider');
-        var $wrap = $frame.parent();
-
-        // Call Sly on frame
-        $frame.sly({
-            horizontal: 1,
-            itemNav: 'forceCentered',
-            smart: 1,
-            activateOn: 'click',
-            activateMiddle: 1,
-            mouseDragging: 1,
-            touchDragging: 1,
-            releaseSwing: 1,
-            scrollBar: $wrap.find('.content__item-list .scrollbar'),
-            startAt: 0,
-            scrollBy: 1,
-            speed: 2500,
-            elasticBounds: 1,
-            easing: 'easeOutExpo',
-            dragHandle: 1,
-            dynamicHandle: false,
-            minHandleSize: 8,
-            clickBar: 1,
-
-            // Buttons
-            prev: $wrap.find('.prev'),
-            next: $wrap.find('.next')
-        });
-    }());
-});
 
 
+
+
+if ($(window).width() > 1000) {
+  if (window.matchMedia("(min-width: 1001px)").matches) {
+
+    jQuery(function ($) {
+        (function () {
+            var title = 'BO 0018/S / D28JJ'; //$('#po13342').find(":selected").text();
+            var startIndex = $("a[title='"+title+"']").parent().index();
+            var $frame = $('#main-slider');
+            var $wrap = $frame.parent();
+
+            // Call Sly on frame
+            $frame.sly({
+                horizontal: 1,
+                itemNav: 'forceCentered',
+                smart: 1,
+                activateOn: 'click',
+                activateMiddle: 1,
+                mouseDragging: 1,
+                touchDragging: 1,
+                releaseSwing: 1,
+                scrollBar: $wrap.find('.scrollbar'),
+                startAt: 0,
+                scrollBy: 1,
+                speed: 2500,
+                elasticBounds: 1,
+                easing: 'easeOutExpo',
+                dragHandle: 1,
+                dynamicHandle: false,
+                minHandleSize: 8,
+                clickBar: 1,
+
+                // Buttons
+                prev: $wrap.find('.prev'),
+                next: $wrap.find('.next')
+            });
+        }());
+    });
+
+  } //- EOF matchMedia
+}   //- EOF (window).width
+
+
+
+if ($(window).width() < 1001) {
+  if (window.matchMedia("(max-width: 1000px)").matches) {
+
+    jQuery(function ($) {
+        (function () {
+            var title = 'BO 0018/S / D28JJ'; //$('#po13342').find(":selected").text();
+            var startIndex = $("a[title='"+title+"']").parent().index();
+            var $frame = $('#main-slider');
+            var $wrap = $frame.parent();
+
+            // Call Sly on frame
+            $frame.sly({
+                horizontal: 1,
+                itemNav: 'forceCentered',
+                smart: 1,
+                activateOn: 'click',
+                activateMiddle: 1,
+                mouseDragging: 1,
+                touchDragging: 1,
+                releaseSwing: 1,
+                scrollBar: $wrap.find('.scrollbar'),
+                startAt: 0,
+                scrollBy: 1,
+                speed: 1000,
+                elasticBounds: 1,
+                easing: 'easeOutExpo',
+                dragHandle: 1,
+                dynamicHandle: false,
+                minHandleSize: 8,
+                clickBar: 1,
+
+                // Buttons
+                prev: $wrap.find('.prev'),
+                next: $wrap.find('.next')
+            });
+        }());
+    });
+
+  } //- EOF matchMedia
+}   //- EOF (window).width
 
 
 if ($(window).width() < 1001) {
@@ -771,7 +822,7 @@ if ($(window).width() < 1001) {
     })
 
   } //- EOF matchMedia
-}
+}   //- EOF (window).width
 
 
 

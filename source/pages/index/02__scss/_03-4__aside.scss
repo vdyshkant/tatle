@@ -12,6 +12,10 @@
   // left: -50px;
   // outline: 2px dashed white;
   // outline-offset: -2px;
+  
+  @media #{$tablet} {
+    display: none;
+  }
 
   &__content {
 

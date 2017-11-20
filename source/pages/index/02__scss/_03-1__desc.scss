@@ -9,6 +9,10 @@
   position: relative;
   z-index: 2;
 
+  @media #{$tablet} {
+    float: left;
+  }
+
 
   &__outer {}
   &__main-title {
@@ -26,6 +30,10 @@
     left: -2px;
   }
   &__list {
+
+    @media #{$tablet} {
+      display: none;
+    }
 
     &.split-list ul{
       margin-right: 25px;

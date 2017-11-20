@@ -23,6 +23,11 @@
 
     // outline: 3px dashed tan;
     // outline-offset: -3px;
+
+    @media #{$tablet} {
+      width: 827px;
+      height: 463px;  
+    }
   }
 
   &__more {

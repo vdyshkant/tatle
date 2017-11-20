@@ -1,4 +1,15 @@
 
+
+.slider {
+
+  & .shell {
+    @media #{$tablet} {
+      padding-left: 87px;
+      padding-right: 87px;
+    }
+  }
+}
+
 .content__item-list {
   // max-width: 1300px;
   position: relative;
@@ -8,10 +19,19 @@
 
 /* Frame */
 .slider .frame {
-	height: 400px;
-	line-height: 400px;
+
   margin-bottom: 130px;
 	overflow: hidden;
+
+  @media #{$wide} {
+    height: 1000px;
+    line-height: 1000px;
+  }
+
+  @media #{$wide} {
+    height: 400px;
+    line-height: 400px;
+  }
 
   & > ul {
     list-style: none;
@@ -33,7 +53,15 @@
     cursor: pointer;
 
     opacity: 0.5;
-    width: 1200px;
+
+    @media #{$wide} {
+      width: 1200px;
+    }
+
+    @media #{$tablet} {
+      width: 826px;
+    }
+
     // transform: scale(1);
   }
 

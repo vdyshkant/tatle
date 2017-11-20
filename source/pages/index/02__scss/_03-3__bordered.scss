@@ -11,6 +11,10 @@
   left: 238px;
   z-index: -1;
 
+  @media #{$tablet} {
+    display: none;
+  }
+
   &-arrowed {
     // border: 2px solid hotpink;
     border: 0;
@@ -22,6 +26,10 @@
     // position: absolute;
     position: relative;
     z-index: 1;
+
+    @media #{$tablet} {
+      display: none;
+    }
 
     &__top-line,
     &__bottom-line {
