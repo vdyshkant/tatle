@@ -84,7 +84,7 @@
     &-text {
       @include font(300, normal, 46px, 35px, $helvUltraL);
       opacity: 0.1; //--@@@@@
-      opacity: 0.4;
+      // opacity: 0.4;
       transform: rotate(90deg) translate(-550%, 92%);
       transform-origin: bottom right;
       color: #efefef;
