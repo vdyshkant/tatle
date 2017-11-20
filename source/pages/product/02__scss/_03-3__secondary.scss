@@ -159,6 +159,7 @@
     color: #555;
     letter-spacing: 0.3px;
     text-align: right;
+    margin-bottom: 10px;
 
     @media #{$tablet} {
       @include font(400, normal, 25px, 55px, $helvRegular);

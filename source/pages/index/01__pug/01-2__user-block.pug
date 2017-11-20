@@ -13,15 +13,17 @@
       | make order
       i
   
-    form.lang
-      label.lang__radio(for='option-two')
-        input(type='radio', name='optionsRadios', value='option1', checked='')
-        i
-        | EN
-      label.lang__radio(for='option-three')
-        input(type='radio', name='optionsRadios', value='option2')
-        i
-        | RU
+    .switcher
+      form.lang
+        input#toggle(type='checkbox', name='optionsRadios', value='option1', checked='')
+        div.pointer
+        label.label(for='toggle')
+          i
+      
 
 
     .sound
+      .speaker
+      audio#player
+        source(src='http://madperfect.com/audio/explosion.mp3', type='audio/mp3')
+        source(src='http://madperfect.com/audio/explosion.ogg', type='audio/ogg')

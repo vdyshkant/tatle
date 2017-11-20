@@ -29,7 +29,7 @@ body.page-index {
 }
 
 .portfolio {
-  @include font(700, normal, 396px, 109.97px, $helvBold);
+  @include font(700, normal, 396px, 396px, $helvBold);
   opacity: 0.01;
   // opacity: 0.11;
   color: #fff;
@@ -38,7 +38,9 @@ body.page-index {
   text-align: center;
 
   position: absolute;
-  top: 122px;
+  overflow: hidden;
+  top: 100px;
+  max-width: 100%;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;

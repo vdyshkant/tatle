@@ -6,15 +6,15 @@
   a.back__arrow(herf="javascript:;" onclick="window.history.go(-1); return false;")
     
 .sort(data-{adasd})
-  ul.sort__list
+  ul.sort__list.filters-group-wrap.filter-options
     .sort__arr
     li.sort__item.active
-      a.sort__link(href="javascript:;" data-id="1") 2017
+      a.sort__link(href="javascript:;" data-group="2017" data-id="1") 2017
     li.sort__item
-      a.sort__link(href="javascript:;") 2016
+      a.sort__link(href="javascript:;" data-group="2016") 2016
     li.sort__item
-      a.sort__link(href="javascript:;") 2015
+      a.sort__link(href="javascript:;" data-group="2015") 2015
     li.sort__item
-      a.sort__link(href="javascript:;") 2014
+      a.sort__link(href="javascript:;" data-group="2014") 2014
     
   .sort__line

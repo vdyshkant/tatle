@@ -10,8 +10,8 @@
   background: url('images/bg-header-dots.png') no-repeat;
   background-position: left 25px top 10px;
 
-  outline: 2px dashed dodgerblue;
-  outline-offset: -2px;
+  // outline: 2px dashed dodgerblue;
+  // outline-offset: -2px;
 
   @media #{$tablet} {
     background: url('images/bg-header-dots--tablet.png') no-repeat;

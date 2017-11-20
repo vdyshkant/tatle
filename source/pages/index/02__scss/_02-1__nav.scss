@@ -62,9 +62,9 @@
     user-select: none;
 
     @media #{$wide} {
-      &:nth-child(1) {
-        color: #fff;
-      }
+      // &:nth-child(1) {
+      //   color: #fff;
+      // }
     }
 
     @media #{$tablet} {

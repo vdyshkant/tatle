@@ -4,6 +4,10 @@
   position: absolute;
   bottom: 0;
 
+  @media #{$tablet} {
+    display: none;  
+  }
+
   &__balls {
     position: relative;
     width: 100px;

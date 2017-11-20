@@ -6,8 +6,7 @@
   width: 300px;
   height: 145px;
 
-  outline: 2px dashed dodgerblue;
-  outline-offset: -2px;
+  z-index: 1;
 
   @media #{$tablet} {
     width: 100%;
@@ -106,22 +105,174 @@
 
 
 .lang {
-  @media screen and (max-width: 1000px) {
-    width: 250px;
+
+    width: 150px;
     height: 144px;
-    float: right;
-  }
+    @media #{$wide} {
 
-  outline: 2px dashed crimson;
-  outline-offset: -2px;
-
-
-  &__radio {
-    @include font(300, normal, 12px, 12px, $helvThin);
-    color: #fff;
-
-    &.active {
-      color: #585859;
+      float: left;
     }
+    @media #{$tablet} {
+
+      float: right;
+    }
+
+  display: block;
+  position: relative;
+
+
+
+  & .label {
+
+    width: 150px;
+    height: 50px;
+    // background: #ccc;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+
+
+
+    // &.active {
+    //   color: #585859;
+    // }
   }
+
+  & #toggle {
+    visibility: hidden;
+  }
+}
+
+.lang #toggle ~ label i {
+  display: block;
+
+  background: #727174;
+  height: 3px;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+
+  @media #{$wide} {
+    height: 1px;
+    width: 26px;
+  }
+
+}
+
+.lang #toggle ~ label i:before,
+.lang #toggle ~ label i:after {
+  @include font(300, normal, 12px, 12px, $helvThin);
+  color: #5e5e5e;
+  position: absolute;
+
+  @media #{$tablet} {
+    @include font(300, normal, 37px, 37px, $helvThin);
+  }
+}
+
+.lang #toggle ~ label i:before {
+    content: "EN";
+    left: -58px;
+    top: -14px;
+
+    @media #{$wide} {
+      left: -30px;
+      top: -6px;
+    }
+}
+
+.lang #toggle ~ label i:after {
+    content: "RU";
+    left: 38px;
+    top: -14px;
+
+    @media #{$wide} {
+      left: 36px;
+      top: -6px;
+    }
+}
+
+.lang #toggle ~ div.pointer:before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #fff;
+
+    top: 65px;
+    left: 81px;
+    z-index: 1;
+    -moz-transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+
+    @media #{$wide} {
+      width: 8px;
+      height: 8px;
+    }
+}
+
+.lang #toggle:checked ~ div.pointer:before {
+    content: '';
+    top: 65px;
+    left: 58px;
+
+    @media #{$tablet} {
+
+      top: 61px;
+    }
+}
+
+.lang #toggle:checked ~ label i:before  {
+  color: #fff;
+  @media #{$wide} {
+    @include font(300, normal, 12px, 12px, $helvThin);
+  }
+  @media #{$tablet} {
+    @include font(500, normal, 37px, 37px, $helvMedium);
+  }
+}
+
+.lang #toggle:not(:checked) ~ label i:after  {
+  color: #fff;
+  @media #{$wide} {
+    @include font(300, normal, 12px, 12px, $helvThin);
+  }
+  @media #{$tablet} {
+    @include font(500, normal, 37px, 37px, $helvMedium);
+  }
+}
+
+.sound {
+  width: 90px;
+  height: 75px;
+  float: right;
+  position: relative;
+
+  @media #{$tablet} {
+    display: none;
+  }
+}
+
+#player {
+  height: 0;
+  width: 0
+}
+
+.speaker {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOCAYAAAD9lDaoAAAA/klEQVQoU3WRu07DUBBEz2A714QiVHS0iIKahihQIUFBxdciilDxAwjxElAhARWiwFe+9iAH3OQx1Up7dme0K1bI9jBFxoJcyxjba6liIjFElAuQ7Y0mcmTzk5dMU8Wh/O2tWDACWiDLYdcZn0Wh686lrnysFH0ODNzy5owdifui0FUf4w+qfJrgqSz1EKP3bGJZ6nEBasRrCLrtAndNSZ31TP2mk0a8hKA72+U/VM1DZ414DkE3de2DtuWrqxc2IUZu+VDGtlve88BFbzmzs10AoZ9MFfuILA9MJdUzaP7itrPu2oiQBy5TNXvNctW1x2rYRAxWQrbXU2QiKH4BHwOSOiTw7NUAAAAASUVORK5CYII=');
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
 }

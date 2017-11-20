@@ -13,8 +13,8 @@
     display: none;
   }
 
-  outline: 4px dashed rgba(153, 50, 205, 0.47);
-  outline-offset: -4px;
+  // outline: 4px dashed rgba(153, 50, 205, 0.47);
+  // outline-offset: -4px;
 
   &__line-top {
     /* Style for "Layer 19 c" */
@@ -59,7 +59,7 @@
 
     transition: 0.6s ease-out;
     &:hover {
-      outline: 2px solid #e6b501;
+      // outline: 2px solid #e6b501;
 
       &::before {
         color: #e6b501;

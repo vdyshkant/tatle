@@ -50,13 +50,12 @@
   }
 
   &__huge-num {
-    position: absolute;
+    position: fixed;
     top: 260px;
     left: 50%;
     transform: translateX(-50%);
-    @include font(500, normal, 963px, 855px, $helvMedium);
-    color: ffffff;
-    color: ffffff;
+    @include font(500, normal, 963px, 575px, $helvMedium);
+    color: #ffffff;
     opacity: 0.015;
     // transition: 0.3s ease-out;
 

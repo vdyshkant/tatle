@@ -13,15 +13,16 @@
       | make order
       i
   
-    form.lang
-      label.lang__radio(for='option-two')
-        input(type='radio', name='optionsRadios', value='option1', checked='')
-        i
-        | EN
-      label.lang__radio(for='option-three')
-        input(type='radio', name='optionsRadios', value='option2')
-        i
-        | RU
-
-
+    .switcher
+      form.lang
+        input#toggle(type='checkbox', name='optionsRadios', value='option1', checked='')
+        div.pointer
+        label.label(for='toggle')
+          i
+      
+        
     .sound
+      .speaker
+      audio#player
+        source(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/test.mp3', type='audio/mp3')
+        source(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/audio.ogg', type='audio/ogg')
