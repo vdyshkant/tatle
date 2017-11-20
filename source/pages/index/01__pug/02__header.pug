@@ -12,18 +12,15 @@ header.header
         nav.nav(data-SCROLLBAR)
           .nav__scrollbar
             .handle
-              .mousearea
-          #nav-slider.frame
-            ul.clearfix
-              li
-          ul.nav__list
-            li.nav__item.active: a Web
-            li.nav__item: a mobile
-            li.nav__item: a program
-            li.nav__item: a design
-            li.nav__item: a video
-            li.nav__item: a photo
-            li.nav__item: a 3d
+          
+          .nav__list.owl-carousel
+            a.nav__item(href="javascript:;" data-menuId="01") Web
+            a.nav__item(href="javascript:;" data-menuId="02") mobile
+            a.nav__item(href="javascript:;" data-menuId="03") program
+            a.nav__item(href="javascript:;" data-menuId="04") design
+            a.nav__item(href="javascript:;" data-menuId="05") video
+            a.nav__item(href="javascript:;" data-menuId="06") photo
+            a.nav__item(href="javascript:;" data-menuId="07") 3d
           
       
             

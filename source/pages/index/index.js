@@ -2,7 +2,7 @@
 import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.green.css';
 import $ from 'jquery';
-// import 'imports-loader?jQuery=jquery!owl.carousel';
+import 'imports-loader?jQuery=jquery!owl.carousel';
 import 'imports-loader?jQuery=jquery!webpack-jquery-ui';
 // import 'imports-loader?jQuery=jquery!jquery-animate-scroll';
 
@@ -699,7 +699,7 @@ jQuery(function ($) {
     (function () {
         var title = 'BO 0018/S / D28JJ'; //$('#po13342').find(":selected").text();
         var startIndex = $("a[title='"+title+"']").parent().index();
-        var $frame = $('#my-product-slider');
+        var $frame = $('#main-slider');
         var $wrap = $frame.parent();
 
         // Call Sly on frame
@@ -712,7 +712,7 @@ jQuery(function ($) {
             mouseDragging: 1,
             touchDragging: 1,
             releaseSwing: 1,
-            scrollBar: $wrap.find('.scrollbar'),
+            scrollBar: $wrap.find('.content__item-list .scrollbar'),
             startAt: 0,
             scrollBy: 1,
             speed: 2500,
@@ -730,6 +730,48 @@ jQuery(function ($) {
     }());
 });
 
+
+
+
+if ($(window).width() < 1001) {
+  if (window.matchMedia("(max-width: 1000px)").matches) {
+
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        center: true,
+        loop: true,
+        items: 2,
+        autoWidth:true,
+        dots:false,
+        margin:0,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          960: {
+            items: 5
+          },
+          1200: {
+            items: 6
+          }
+        }
+      });
+      owl.on('mousewheel', '.owl-stage', function(e) {
+        if (e.deltaY > 0) {
+          owl.trigger('next.owl');
+        } else {
+          owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+      });
+    })
+
+  } //- EOF matchMedia
+}
 
 
 
